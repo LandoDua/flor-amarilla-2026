@@ -2,36 +2,38 @@ import React, { useState, useEffect, useMemo } from "react";
 import FlowerCutout from "./FlowerCutout";
 import FinalMessage from "./FinalMessage";
 
+const base = import.meta.env.BASE_URL;
+
 const yellowFlowers = [
-  "/flowers/sunflower1.png",
-  "/flowers/sunflower2.png",
-  "/flowers/sunflower3.png",
-  "/flowers/sunflower4.png",
-  "/flowers/sunflower5.png",
-  "/flowers/sunflower6.png",
-  "/flowers/sunflower7.png",
-  "/flowers/sunflower8.png",
-  "/flowers/tulip1.png",
-  "/flowers/tulip2.png",
-  "/flowers/tulip3.png",
-  "/flowers/tulip4.png",
-  "/flowers/tulip5.png",
-  "/flowers/tulip6.png",
-  "/flowers/lilium1.png",
-  "/flowers/lilium2.png",
-  "/flowers/lilium3.png",
-  "/flowers/lilium4.png",
-  "/flowers/dandelion1.png",
-  "/flowers/dandelion2.png",
-  "/flowers/dandelion3.png",
+  `${base}flowers/sunflower1.png`,
+  `${base}flowers/sunflower2.png`,
+  `${base}flowers/sunflower3.png`,
+  `${base}flowers/sunflower4.png`,
+  `${base}flowers/sunflower5.png`,
+  `${base}flowers/sunflower6.png`,
+  `${base}flowers/sunflower7.png`,
+  `${base}flowers/sunflower8.png`,
+  `${base}flowers/tulip1.png`,
+  `${base}flowers/tulip2.png`,
+  `${base}flowers/tulip3.png`,
+  `${base}flowers/tulip4.png`,
+  `${base}flowers/tulip5.png`,
+  `${base}flowers/tulip6.png`,
+  `${base}flowers/lilium1.png`,
+  `${base}flowers/lilium2.png`,
+  `${base}flowers/lilium3.png`,
+  `${base}flowers/lilium4.png`,
+  `${base}flowers/dandelion1.png`,
+  `${base}flowers/dandelion2.png`,
+  `${base}flowers/dandelion3.png`,
 ];
 
 const otherFlowers = [
-  "/flowers/lilac1.png",
-  "/flowers/lilac2.png",
-  "/flowers/lilac3.png",
-  "/flowers/viola1.png",
-  "/flowers/viola2.png",
+  `${base}flowers/lilac1.png`,
+  `${base}flowers/lilac2.png`,
+  `${base}flowers/lilac3.png`,
+  `${base}flowers/viola1.png`,
+  `${base}flowers/viola2.png`,
 ];
 
 const pickImage = () => {
