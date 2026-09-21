@@ -5,6 +5,27 @@
   overflow: hidden;
 }
 
+/* ── Loading screen ── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f0e1 0%, #ebe5d0 50%, #f0ead5 100%);
+  gap: 1.5rem;
+}
+
+.loading-text {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-style: italic;
+  color: #8b7749;
+  letter-spacing: 0.05em;
+}
+
 /* ── Fondo de periódico ── */
 .newspaper-bg {
   position: absolute;
