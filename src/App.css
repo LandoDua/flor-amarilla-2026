@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5f0e1 0%, #ebe5d0 50%, #f0ead5 100%);
+  background: linear-gradient(135deg, #b5844a 0%, #a67839 50%, #c49355 100%);
   gap: 1.5rem;
 }
 
@@ -26,12 +26,12 @@
   letter-spacing: 0.05em;
 }
 
-/* ── Fondo de periódico ── */
+/* ── Tablero de corcho ── */
 .newspaper-bg {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, #f5f0e1 0%, #ebe5d0 25%, #f2ecd8 50%, #e8e0c8 75%, #f0ead5 100%);
+    linear-gradient(135deg, #b5844a 0%, #a67839 20%, #c49355 40%, #a07030 60%, #b8874e 80%, #9a6b2d 100%);
   z-index: 0;
 }
 
@@ -39,21 +39,15 @@
   position: absolute;
   inset: 0;
   background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E"),
     repeating-linear-gradient(
-      0deg,
+      45deg,
       transparent,
-      transparent 28px,
-      rgba(0, 0, 0, 0.03) 28px,
-      rgba(0, 0, 0, 0.03) 29px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 200px,
-      rgba(0, 0, 0, 0.04) 200px,
-      rgba(0, 0, 0, 0.04) 201px
+      transparent 3px,
+      rgba(0, 0, 0, 0.02) 3px,
+      rgba(0, 0, 0, 0.02) 4px
     );
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .newspaper-texture::before {
@@ -61,25 +55,66 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(139, 119, 73, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 30%, rgba(139, 119, 73, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(139, 119, 73, 0.05) 0%, transparent 55%);
+    radial-gradient(ellipse at 15% 15%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 85%, rgba(0, 0, 0, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(180, 130, 60, 0.1) 0%, transparent 60%);
 }
 
 .newspaper-texture::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: 0.5;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 90, 43, 0.06) 2px,
+      rgba(139, 90, 43, 0.06) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 90, 43, 0.04) 2px,
+      rgba(139, 90, 43, 0.04) 3px
+    );
+  opacity: 0.8;
 }
 
 .newspaper-columns {
   position: absolute;
-  inset: 0;
+  top: 4%;
+  left: 4%;
+  right: 4%;
+  bottom: 4%;
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap: 16px;
+  padding: 24px 20px;
+  background:
+    linear-gradient(135deg, #f5f0e1 0%, #ede7d3 30%, #f2ecd8 60%, #e8e0c8 100%);
+  border-radius: 2px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 0 40px rgba(139, 119, 73, 0.08);
+  transform: rotate(-0.5deg);
+  z-index: 0;
+}
+
+.newspaper-columns::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(0, 0, 0, 0.025) 28px,
+      rgba(0, 0, 0, 0.025) 29px
+    );
+  pointer-events: none;
 }
 
 .newspaper-columns .column {
@@ -100,8 +135,8 @@
     0deg,
     transparent,
     transparent 14px,
-    rgba(0, 0, 0, 0.025) 14px,
-    rgba(0, 0, 0, 0.025) 15px
+    rgba(0, 0, 0, 0.02) 14px,
+    rgba(0, 0, 0, 0.02) 15px
   );
 }
 

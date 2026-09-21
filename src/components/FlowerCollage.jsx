@@ -60,15 +60,15 @@ const generateFlowerPositions = (cols, rows) => {
       const sizeRoll = Math.random();
       let size;
       if (sizeRoll < 0.1) {
-        size = rand(35, 55);
+        size = rand(65, 90);
       } else if (sizeRoll < 0.3) {
-        size = rand(55, 85);
+        size = rand(90, 120);
       } else if (sizeRoll < 0.6) {
-        size = rand(85, 130);
+        size = rand(120, 160);
       } else if (sizeRoll < 0.85) {
-        size = rand(130, 185);
+        size = rand(160, 210);
       } else {
-        size = rand(185, 240);
+        size = rand(210, 260);
       }
 
       positions.push({
