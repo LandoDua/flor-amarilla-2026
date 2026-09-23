@@ -36,6 +36,11 @@ const otherFlowers = [
   `${base}flowers/viola2.png`,
 ];
 
+/**
+ * Selecciona una imagen de flor aleatoria.
+ * 82% de probabilidad de elegir una flor amarilla, 18% de otros colores.
+ * @returns {string} Ruta de la imagen seleccionada
+ */
 const pickImage = () => {
   if (Math.random() < 0.82) {
     return yellowFlowers[Math.floor(Math.random() * yellowFlowers.length)];
@@ -43,6 +48,13 @@ const pickImage = () => {
   return otherFlowers[Math.floor(Math.random() * otherFlowers.length)];
 };
 
+/**
+ * Genera posiciones aleatorias para las flores en una cuadricula.
+ * Cada flor recibe: posicion (x, y), rotacion, tamano, imagen y z-index.
+ * @param {number} cols - Numero de columnas
+ * @param {number} rows - Numero de filas
+ * @returns {Array<{x: string, y: string, rotation: number, size: number, src: string, zIndex: number}>}
+ */
 const generateFlowerPositions = (cols, rows) => {
   const positions = [];
   const rand = (min, max) => Math.random() * (max - min) + min;

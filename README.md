@@ -2,7 +2,7 @@
 
 Carta animada de flores amarillas para el Dia de las Flores Amarillas 2026. Una aplicacion web interactiva que muestra un ramo virtual de flores sobre un tablero de corcho, con animaciones suaves y un mensaje romántico al final.
 
-![Flores Amarillas](public/flowers/sunflower1.png)
+![Captura de la aplicacion](docs/screenshot.jpeg)
 
 ## Demo
 

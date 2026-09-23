@@ -12,6 +12,8 @@ Guia completa para agentes de IA que trabajen en este proyecto.
 - **Deploy**: GitHub Pages via GitHub Actions
 - **PWA**: Si, instalable y funciona offline
 
+> **IMPORTANTE**: Este proyecto contiene textos personales (nombres, mensajes). Antes de usarlo, personaliza los textos marcados con `<!-- PERSONALIZAR -->` en los archivos fuente.
+
 ## Arquitectura
 
 ### Flujo de la Aplicacion
@@ -179,6 +181,27 @@ const wobbleConfig = {
 ### Cambiar el mensaje final
 
 En `src/components/FinalMessage.jsx`, modificar el contenido JSX directamente. Cada linea es un `<motion.p>` con su propio delay.
+
+### Textos Personalizables
+
+**IMPORTANTE**: Estos textos son personales. Si clonas este proyecto, debes cambiarlos.
+
+| Texto | Ubicacion | Linea |
+|-------|-----------|-------|
+| `Para: luly` | `src/App.jsx` | ~79 |
+| `Orlando` | `src/App.jsx` | ~90 |
+| `Tal vez no sean reales` | `src/components/FinalMessage.jsx` | ~26 |
+| `Pero no te quedas sin tus flores amarillas` | `src/components/FinalMessage.jsx` | ~35 |
+| `TE AMO` | `src/components/FinalMessage.jsx` | ~44 |
+| `Flores Amarillas 💛` | `index.html` | ~8 (titulo) |
+| `Flores Amarillas 💛` | `index.html` | ~18 (og:title) |
+
+Para encontrar todos los textos rapidamente:
+
+```bash
+# Buscar textos personales en el codigo
+grep -rn "luly\|Orlando\|TE AMO" src/
+```
 
 ## Configuracion de Herramientas
 
